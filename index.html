@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vyshnavi Madasu — Portfolio</title>
+  <style>
+    :root{
+      --bg1: #ff9a9e;
+      --bg2: #fad0c4;
+      --card: rgba(255,255,255,0.85);
+      --muted: #555;
+      --accent: #6c5ce7;
+      --glass: rgba(255,255,255,0.18);
+      --shadow: 0 8px 24px rgba(16,24,40,0.12);
+      font-synthesis: none;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    body{
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:#111;
+      padding:40px 20px;
+      display:flex;align-items:center;justify-content:center;
+    }
+
+    .container{width:100%;max-width:1100px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.82));border-radius:18px;padding:28px;box-shadow:var(--shadow);backdrop-filter: blur(6px);}
+    header{display:flex;gap:20px;align-items:center;margin-bottom:18px}
+    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,#fff 0%,rgba(255,255,255,0.6) 100%);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:28px}
+    h1{margin:0;font-size:22px}
+    .sub{color:var(--muted);font-size:14px}
+    .layout{display:grid;grid-template-columns:1fr 360px;gap:20px}
+
+    /* Left column */
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .about p{margin:8px 0 0;color:var(--muted);line-height:1.45}
+
+    .projects{display:grid;gap:12px}
+    .proj{display:flex;gap:12px;align-items:flex-start}
+    .proj .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px}
+    .proj h3{margin:0;font-size:16px}
+    .proj p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:6px 8px;border-radius:999px;background:rgba(108,92,231,0.12);font-size:13px;color:var(--accent)}
+
+    /* Right column */
+    .right-section{display:flex;flex-direction:column;gap:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 10px;border-radius:8px;background:linear-gradient(90deg, rgba(108,92,231,0.12), rgba(108,92,231,0.06));font-weight:600;font-size:13px;color:var(--accent)}
+    .edu{font-size:14px;color:var(--muted)}
+
+    .contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .contact-list li{display:flex;gap:8px;align-items:center}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    .download{background:transparent;border:2px solid rgba(16,24,40,0.06);color:var(--accent)}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr;}
+      .right-section{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="avatar">VM</div>
+      <div>
+        <h1>MADASU VYSHNAVI</h1>
+        <div class="sub">B.Tech (CSD) • Data Science Enthusiast • Web & ML</div>
+        <div style="margin-top:8px;font-size:14px;color:var(--muted)">vyshnavimadasu@gmail.com • +91 63036 60665</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <a class="btn" href="mailto:vyshnavimadasu@gmail.com">Email</a>
+        <a class="btn download" href="/resume.pdf" download>Download Resume</a>
+      </div>
+    </header>
+
+    <div class="layout">
+      <main>
+        <section class="card about">
+          <h2 style="margin-top:0">About</h2>
+          <p>
+            I am a B.Tech student specializing in Computer Science and Data Science with hands-on internship experience in Data Science & Analytics. I enjoy building data-driven projects and web interfaces — combining clean UI with practical machine learning.
+          </p>
+        </section>
+
+        <section style="margin-top:12px" class="card">
+          <h2 style="margin-top:0">Projects</h2>
+          <div class="projects">
+            <article class="proj">
+              <div style="flex:1">
+                <h3>1. Rainfall Prediction (Hybrid ML)</h3>
+                <p>Predictive model combining classical ML and deep learning to forecast short-term rainfall using historic meteorological features.</p>
+                <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit‑Learn</span><span class="tag">TensorFlow</span></div>
+              </div>
+            </article>
+
+            <article class="proj">
+              <div style="flex:1">
+                <h3>2. Student Performance Dashboard</h3>
+                <p>A responsive web dashboard that visualizes student scores, attendance and trends. Built with HTML/CSS/JavaScript and integrated sample analytics.</p>
+                <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+              </div>
+            </article>
+
+            <article class="proj">
+              <div style="flex:1">
+                <h3>3. Data Science Internship — Zidio / Codsoft</h3>
+                <p>Worked on data cleaning, exploratory analysis and model building for real-world datasets during internships.</p>
+                <div class="tags"><span class="tag">EDA</span><span class="tag">SQL</span><span class="tag">Modeling</span></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section style="margin-top:12px" class="card">
+          <h2 style="margin-top:0">Education</h2>
+          <div class="edu">
+            <strong>B.Tech (CSD)</strong><br>
+            KU College of Engineering and Technology, Warangal — 2022–2026
+            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:10px 0">
+            <strong>Intermediate (MPC)</strong><br>
+            MJPTBCWREIS (Girls) College, Adilabad — 88%
+            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:10px 0">
+            <strong>S.S.C.</strong><br>
+            Govt High School, Karimnagar — 10.0 GPA
+          </div>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="right-section">
+          <div class="card">
+            <h3 style="margin-top:0">Skills</h3>
+            <div class="skills">
+              <span class="skill">Python</span>
+              <span class="skill">C</span>
+              <span class="skill">SQL</span>
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">AI / ML</span>
+              <span class="skill">Data Visualization</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0">Internships & Certifications</h3>
+            <p class="edu">Data Science Analytics — Zidio Development (Certificate)</p>
+            <p class="edu">Data Science — Codsoft (Certificate)</p>
+            <p class="edu">Participation Certificate — NSS (KUCET)</p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0">Contact</h3>
+            <ul class="contact-list">
+              <li><strong>Email:</strong>&nbsp;vyshnavimadasu@gmail.com</li>
+            
+              <li><strong>Location:</strong>&nbsp;Warangal / Telangana, India</li>
+            </ul>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn" href="mailto:vyshnavimadasu@gmail.com">Message</a>
+              <a class="btn download" href="#contact">Get in touch</a>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Built with ♥ — Update this file to add project links, GitHub, or portfolio images.
+    </footer>
+  </div>
+</body>
+</html>v
